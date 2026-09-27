@@ -10,49 +10,68 @@ import Link from "next/link";
 import React from "react";
 
 export default function Header() {
+    const navLinks = [
+        { text: "Home", url: "/" },
+        { text: "About Us", url: "/" },
+        { text: "Store", url: "/" },
+        { text: "Home", url: "/" },
+        { text: "Home", url: "/" },
+        { text: "Home", url: "/" },
+    ];
+
     return (
         <div>
             <TopRibbon />
             <header className="px-12 bg-[#1D3359]">
-                <div className="mx-auto pt-8 max-w-375 flex justify-between items-center border-b border-white/20">
-                    <Link
-                        href="/"
-                        className="block relative w-20 aspect-square"
-                    >
-                        <Image
-                            alt="Best authentic disposable vape store in UAE"
-                            src="/files/Vape-stall-logo-Black.webp"
-                            fill
-                        />
-                    </Link>
+                <div className="mx-auto pt-8 max-w-375 ">
+                    <div className="flex justify-between items-center border-b border-white/20">
+                        <Link
+                            href="/"
+                            className="block relative w-20 aspect-square"
+                        >
+                            <Image
+                                alt="Best authentic disposable vape store in UAE"
+                                src="/files/Vape-stall-logo-Black.webp"
+                                fill
+                            />
+                        </Link>
 
-                    <div>
-                        <input
-                            placeholder="Search"
-                            className="w-[516px] bg-white rounded-full"
-                        />
+                        <div>
+                            <input
+                                placeholder="Search"
+                                className="w-129 bg-white rounded-full"
+                            />
+                        </div>
+
+                        <div className="flex">
+                            <div className="px-2 group">
+                                <Heart
+                                    strokeWidth={1}
+                                    className="group-hover:text-white/60 cursor-pointer"
+                                />
+                            </div>
+                            <div className="px-2 group">
+                                <User
+                                    strokeWidth={1}
+                                    className="group-hover:text-white/60 cursor-pointer"
+                                />
+                            </div>
+                            <div className="px-2 group">
+                                <ShoppingBag
+                                    strokeWidth={1}
+                                    className="group-hover:text-white/60 cursor-pointer"
+                                />
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="flex">
-                        <div className="px-2 group">
-                            <Heart
-                                strokeWidth={1}
-                                className="group-hover:text-white/60 cursor-pointer"
-                            />
-                        </div>
-                        <div className="px-2 group">
-                            <User
-                                strokeWidth={1}
-                                className="group-hover:text-white/60 cursor-pointer"
-                            />
-                        </div>
-                        <div className="px-2 group">
-                            <ShoppingBag
-                                strokeWidth={1}
-                                className="group-hover:text-white/60 cursor-pointer"
-                            />
-                        </div>
-                    </div>
+                    <nav className="py-3 flex justify-center gap-9 font-bold">
+                        {navLinks.map((link, idx) => (
+                            <Link key={idx} href={link.url} className="">
+                                {link.text}
+                            </Link>
+                        ))}
+                    </nav>
                 </div>
             </header>
         </div>
