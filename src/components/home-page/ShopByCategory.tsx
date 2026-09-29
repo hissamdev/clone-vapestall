@@ -62,7 +62,7 @@ export default function ShopByCategory() {
                 <span className="w-7 h-px bg-orange-400 shadow"></span>
             </div>
 
-            <div className="category-boxes max-w-375 w-full mt-12 mx-auto px-12 flex justify-between gap-6 text-left">
+            <div className="category-boxes max-w-375 w-full mt-12 mx-auto px-12 flex flex-wrap justify-between gap-6 text-left">
                 {categories.map((category, idx) => (
                     <CategoryBox
                         key={idx}
@@ -102,7 +102,7 @@ const CategoryBox = ({
     return (
         <Link
             href={url}
-            className="relative max-w-118.25 w-full h-125 rounded-3xl overflow-hidden group"
+            className="relative min-w-78.75 max-w-118.25 flex-1 h-125 rounded-3xl overflow-hidden group"
         >
             <Image
                 alt=""
