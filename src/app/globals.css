@@ -26,6 +26,12 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+h1,
+h2,
+h3 {
+    font-family: Outfit;
+}
+
 .shop-by-category__label::before,
 .shop-by-category__label::after {
     content: "";

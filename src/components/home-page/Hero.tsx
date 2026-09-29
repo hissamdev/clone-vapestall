@@ -1,6 +1,7 @@
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import GoldenButton from "../ui/GoldenButton";
 
 export default function Hero() {
     return (
@@ -20,15 +21,7 @@ export default function Hero() {
                             starter kits from top brands. Delivered anywhere in
                             Dubai, UAE.
                         </p>
-                        <Link
-                            href="/"
-                            className="mt-6 px-4 py-3 w-fit flex items-center gap-2 bg-[#b48648] font-bold rounded-full"
-                        >
-                            Explore
-                            <span className="flex items-center justify-center bg-black/20 rounded-full w-7 aspect-square">
-                                <MoveUpRight size={18} strokeWidth={2} />
-                            </span>
-                        </Link>
+                        <GoldenButton text="Explore" />
                     </div>
                     <div className="relative w-100 aspect-square">
                         <Image

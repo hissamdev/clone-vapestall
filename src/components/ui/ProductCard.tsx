@@ -8,7 +8,7 @@ export default function ProductCard({
     totalReviews,
 }: ProductCardType) {
     return (
-        <div className="px-4 py-8 border">
+        <div className="px-4 py-8 border text-left">
             <div className="relative w-84.5 aspect-square">
                 <Image
                     src={staticImage}

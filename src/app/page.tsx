@@ -6,6 +6,8 @@ import Hero from "../components/home-page/Hero";
 import ShopByCategory from "../components/home-page/ShopByCategory";
 import BestSeller from "../components/home-page/BestSeller";
 import NewArrivals from "../components/home-page/NewArrivals";
+import Brands from "../components/home-page/Brands";
+import MostPopular from "../components/home-page/MostPopular";
 
 export default function Home() {
     return (
@@ -14,6 +16,8 @@ export default function Home() {
             <ShopByCategory />
             <BestSeller />
             <NewArrivals />
+            <Brands />
+            <MostPopular />
         </>
     );
 }

@@ -4,7 +4,7 @@ import { bestSellers } from "./BestSeller";
 
 export default function NewArrivals() {
     return (
-        <section className="text-center bg-white">
+        <section className="pb-18 text-center bg-white">
             <SectionTopPattern
                 label="Top Picks"
                 heading="New Arrivals"
