@@ -1,7 +1,11 @@
 import {
+    Hamburger,
+    HamburgerIcon,
     Heart,
+    Menu,
     PersonStandingIcon,
     Phone,
+    Search,
     ShoppingBag,
     User,
 } from "lucide-react";
@@ -25,6 +29,9 @@ export default function Header() {
             <header className="px-12 bg-[#1D3359]">
                 <div className="mx-auto pt-8 max-w-375 ">
                     <div className="flex justify-between items-center border-b border-white/20">
+                        <button>
+                            <Menu />
+                        </button>
                         <Link
                             href="/"
                             className="block relative w-20 aspect-square"
@@ -36,7 +43,7 @@ export default function Header() {
                             />
                         </Link>
 
-                        <div>
+                        <div className="hidden xl:block">
                             <input
                                 placeholder="Search"
                                 className="w-129 bg-white rounded-full"
@@ -44,6 +51,12 @@ export default function Header() {
                         </div>
 
                         <div className="flex">
+                            <div className="block xl:hidden px-2 group">
+                                <Search
+                                    strokeWidth={1}
+                                    className="group-hover:text-white/60 cursor-pointer"
+                                />
+                            </div>
                             <div className="px-2 group">
                                 <Heart
                                     strokeWidth={1}
@@ -65,7 +78,7 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <nav className="py-3 flex justify-center gap-9 font-bold">
+                    <nav className="hidden py-3 xl:flex justify-center gap-9 font-bold">
                         {navLinks.map((link, idx) => (
                             <Link key={idx} href={link.url} className="">
                                 {link.text}
