@@ -5,25 +5,41 @@ import GoldenButton from "../ui/GoldenButton";
 
 export default function Hero() {
     return (
-        <section className="relative py-8 h-[calc(100vh-202px)] bg-white">
+        <section
+            className={`relative
+                h-[calc(100vh-170px)] py-8
+                bg-white
+                md:h-[calc(100vh-202px)]`}
+        >
             <div className="h-full">
-                <div className="px-25 py-15 h-full flex justify-between items-center bg-orange-800 rounded-xl">
-                    <div className="max-w-125">
-                        <span className="block w-fit mb-4 px-5 py-2 text-xs font-bold text-[#1a2f52] bg-[#f78804] rounded-full">
+                <div
+                    className={`flex h-full flex-col-reverse items-start justify-between
+                        rounded-xl bg-orange-800 px-7.5 py-15
+                        md:flex-row md:gap-12 md:items-center md:px-25`}
+                >
+                    <div className="md:max-w-125">
+                        <span
+                            className={`mb-4 block w-fit rounded-full
+                                bg-[#f78804] px-5 py-2
+                                text-xs font-bold text-[#1a2f52]`}
+                        >
                             Exclusive offer up to 10% OFF
                         </span>
-                        <h1 className="font-bold text-[36px] leading-tight">
+                        <h1 className="font-bold leading-tight md:text-[36px]">
                             Buy Authentic Vape in Dubai — Fast Delivery,Best
                             Prices
                         </h1>
-                        <p className="mt-6 text-[14px] text-[#f0d0c2] font-bold">
+                        <p className="mt-6 text-[14px] font-bold text-[#f0d0c2]">
                             Shop premium disposable vapes, pod systems, and
                             starter kits from top brands. Delivered anywhere in
                             Dubai, UAE.
                         </p>
                         <GoldenButton text="Explore" />
                     </div>
-                    <div className="relative w-100 aspect-square">
+                    <div
+                        className={`relative aspect-square w-full max-w-45
+                            self-center md:max-w-100`}
+                    >
                         <Image
                             alt="alt text"
                             src="/files/EW9000_Cherry_Strazz_full_kit_result.webp"
@@ -33,8 +49,8 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="absolute -bottom-4 w-full flex justify-center">
-                <div className="relative w-[60%] flex justify-center">
+            <div className="absolute -bottom-4 flex w-full justify-center">
+                <div className="relative flex w-[60%] justify-center">
                     <svg
                         width="100%"
                         height="100"
@@ -47,7 +63,10 @@ export default function Hero() {
                             stroke="white"
                         />
                     </svg>
-                    <div className="absolute top-1/2 bottom 1/2 -translate-y-full w-fit z-20 text-orange-400">
+                    <div
+                        className={`absolute top-1/2 bottom 1/2 z-20 w-fit
+                            -translate-y-full text-orange-400`}
+                    >
                         Buttons
                     </div>
                 </div>
