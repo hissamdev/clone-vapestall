@@ -1,6 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const categories = [
     {
@@ -23,10 +24,33 @@ const categories = [
     },
 ];
 
+const features = [
+    {
+        icon: <ShoppingBag color="black" className="inline" />,
+        title: "Free Shipping",
+        desc: "Terms & Conditions applied for free shipping and delivery",
+    },
+    {
+        icon: <ShoppingBag color="black" className="inline" />,
+        title: "Free Shipping",
+        desc: "Terms & Conditions applied for free shipping and delivery",
+    },
+    {
+        icon: <ShoppingBag color="black" className="inline" />,
+        title: "Free Shipping",
+        desc: "Terms & Conditions applied for free shipping and delivery",
+    },
+    {
+        icon: <ShoppingBag color="black" className="inline" />,
+        title: "Free Shipping",
+        desc: "Terms & Conditions applied for free shipping and delivery",
+    },
+];
+
 export default function ShopByCategory() {
     return (
-        <section className="shop-by-category h-screen bg-white text-center">
-            <p className="shop-by-category__label mt-12 inline-flex items-center uppercase text-orange-400 text-sm font-semibold tracking-widest">
+        <section className="shop-by-category py-14 bg-white text-center">
+            <p className="shop-by-category__label inline-flex items-center uppercase text-orange-400 text-sm font-semibold tracking-widest">
                 Find your favorites
             </p>
             <h2 className="pt-2 text-[#25406f] text-5xl font-semibold font-outfit">
@@ -38,7 +62,7 @@ export default function ShopByCategory() {
                 <span className="w-7 h-px bg-orange-400 shadow"></span>
             </div>
 
-            <div className="category-boxes mt-12 mx-auto px-12 flex justify-between text-left">
+            <div className="category-boxes w-375 mt-12 mx-auto px-12 flex justify-between gap-6 text-left">
                 {categories.map((category, idx) => (
                     <CategoryBox
                         key={idx}
@@ -46,6 +70,17 @@ export default function ShopByCategory() {
                         goldenTag={category.goldenTag}
                         title={category.title}
                         url={category.url}
+                    />
+                ))}
+            </div>
+
+            <div className="mt-24 mx-auto px-12 flex gap-17 max-w-375">
+                {features.map((feature, idx) => (
+                    <FeatureBox
+                        key={idx}
+                        icon={feature.icon}
+                        title={feature.title}
+                        desc={feature.desc}
                     />
                 ))}
             </div>
@@ -92,5 +127,23 @@ const CategoryBox = ({
                 </div>
             </div>
         </Link>
+    );
+};
+
+const FeatureBox = ({
+    icon,
+    title,
+    desc,
+}: {
+    icon: React.ReactNode;
+    title: string;
+    desc: string;
+}) => {
+    return (
+        <div className="py-8 text-center border border-white/40 bg-[#E5EAF1] rounded-lg">
+            {icon}
+            <p className="text-[#25406F]">{title}</p>
+            <p className="text-[#777777]">{desc}</p>
+        </div>
     );
 };

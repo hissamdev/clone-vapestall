@@ -34,3 +34,12 @@ body {
     height: 1px;
     background-color: orange;
 }
+
+.gradient__label::before {
+    content: "";
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 60px;
+    height: 4px;
+    background-color: black;
+}
