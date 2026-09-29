@@ -1,5 +1,8 @@
 import SectionTopPattern from "../ui/SectionTopPattern";
 import ProductCard from "../ui/ProductCard";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import ViewAll from "../ui/ViewAll";
 
 export type ProductCardType = {
     staticImage: string;
@@ -13,7 +16,7 @@ export type ProductCardType = {
     starsDisplay: number;
 };
 
-const bestSellers = [
+export const bestSellers = [
     {
         staticImage:
             "https://vapstall.ae/cdn/shop/files/Buy_Elf_bar_Ice_King_30000_Puffs_Disposable_Vape_50mg_in_UAE.png",
@@ -70,7 +73,7 @@ const bestSellers = [
 
 export default function BestSeller() {
     return (
-        <section className="py-24 px-12.5 h-screen bg-white text-center">
+        <section className="py-24 px-12.5 bg-white text-center">
             <SectionTopPattern
                 label="Top Picks"
                 heading="Best Selling"
@@ -82,6 +85,8 @@ export default function BestSeller() {
                     <ProductCard key={idx} {...product} />
                 ))}
             </div>
+
+            <ViewAll />
         </section>
     );
 }

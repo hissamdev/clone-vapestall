@@ -8,3 +8,4 @@ Considerations
 - Sections contain repeated and unpolished images and text
 - Page is not mobile responsive yet
 - Mapped arrays contain duplicate objects, and use index as key
+-

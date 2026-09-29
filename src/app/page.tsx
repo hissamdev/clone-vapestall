@@ -5,6 +5,7 @@ import { Diamond, MoveUpRight } from "lucide-react";
 import Hero from "../components/home-page/Hero";
 import ShopByCategory from "../components/home-page/ShopByCategory";
 import BestSeller from "../components/home-page/BestSeller";
+import NewArrivals from "../components/home-page/NewArrivals";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Hero />
             <ShopByCategory />
             <BestSeller />
+            <NewArrivals />
         </>
     );
 }
