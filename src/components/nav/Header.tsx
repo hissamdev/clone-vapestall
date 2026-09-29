@@ -90,7 +90,7 @@ const TopRibbon = () => {
 
     return (
         <div className="header-ribbon w-full flex bg-yellow-800">
-            <div className="flex-1 flex items-center bg-[#253F6D] gap-12 text-xs whitespace-nowrap overflow-hidden">
+            <div className="relative header-marquee__lines flex-1 flex items-center bg-[#253F6D] gap-12 text-xs whitespace-nowrap overflow-hidden">
                 {marqueList.map((marqueItem, idx) => (
                     <div key={idx}>
                         <span className="pr-2 text-[#f88a07]">✦</span>

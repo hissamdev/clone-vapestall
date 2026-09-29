@@ -9,7 +9,7 @@ export default function ProductCard({
 }: ProductCardType) {
     return (
         <div className="px-4 py-8 border text-left">
-            <div className="relative w-84.5 aspect-square">
+            <div className="relative max-w-84.5 w-full aspect-square">
                 <Image
                     src={staticImage}
                     alt=""
