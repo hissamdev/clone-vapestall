@@ -1,5 +1,18 @@
 import SectionTopPattern from "../ui/SectionTopPattern";
-import SmallLabel from "../ui/SmallLabel";
+
+const bestSellers = [
+    {
+        staticImage: "",
+        hoverImage: "",
+        url: "",
+        title: "",
+        price: 9.99,
+        discount: 0,
+        sale: "",
+        totalReviews: 50,
+        starsDisplay: 4,
+    },
+];
 
 export default function BestSeller() {
     return (
@@ -9,6 +22,8 @@ export default function BestSeller() {
                 heading="Best Selling"
                 desc="Our most loved products, chosen by you"
             />
+
+            <div className="grid grid-cols-4"></div>
         </section>
     );
 }
